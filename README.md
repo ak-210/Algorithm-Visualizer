@@ -12,24 +12,24 @@ Elements become green after sorting is finished.
 Two partitions are created at each step first appears red and the second appears pink.
 These partitions then merge while the color of elements remains as it was before.\
 <br>
-![merge-sort](https://github.com/ak-210/Algorithm-Visualizer/blob/master/readme_files/merge.gif)
+![merge-sort](https://github.com/ak-210/Algorithm-Visualizer/blob/main/readme_files/merge.gif)
 
 ### Quick Sort
 The pivot element turns pink, which changes into cyan after getting the correct position.
 Becomes green when all are sorted.\
 <br>
-![quick-sort](https://github.com/ak-210/Algorithm-Visualizer/blob/master/readme_files/quick.gif)
+![quick-sort](https://github.com/ak-210/Algorithm-Visualizer/blob/main/readme_files/quick.gif)
 
 ### Heap Sort
 Elements appear pink in the heap and turn cyan when sorted.
 Becomes green when all are sorted.\
 <br>
-![heap-sort](https://github.com/ak-210/Algorithm-Visualizer/blob/master/readme_files/heap.gif)
+![heap-sort](https://github.com/ak-210/Algorithm-Visualizer/blob/main/readme_files/heap.gif)
 
 ### Bubble Sort
 Elements that are being compared appear red and pink. Sorted elements appear cyan.\
 <br>
-![bubble-sort](https://github.com/ak-210/Algorithm-Visualizer/blob/master/readme_files/bubble.gif)
+![bubble-sort](https://github.com/ak-210/Algorithm-Visualizer/blob/main/readme_files/bubble.gif)
 
 #### Acknowledgment
 
