@@ -1,0 +1,83 @@
+body{
+  background-image: url("images/back3.jpg");
+  background-size: 100% auto;
+  background-position: center center;
+  text-align:center;
+  margin:auto;
+  padding:0;
+}
+
+.floatleft{
+	float: left;
+	display: flex;
+}
+.logo{
+	margin-top: 20px;
+	font-family: 'Rye', cursive;
+	font-size: 50px;
+}
+
+.main{
+	margin-left: 12%;
+}
+
+.sidebar{
+	margin-bottom: 4px;
+	text-align: center;
+	display: flex;
+  	justify-content: center;
+}
+
+.size{
+	font-family: 'Chelsea Market', cursive;
+	font-size: 130%;
+}
+
+.btn{
+	margin-bottom: 4px;
+}
+
+.btnreset{
+	width: 100%;
+}
+
+.figure{
+	margin: 5px 50px 0px 10px;
+	margin-left: 10px;
+}
+
+.workingbar{
+	margin-left: 6%;
+	clear: left;
+	float: left;
+	display: flex;
+}
+
+.bar{
+	margin-left: 1px;
+	background-color: red;
+}
+
+#target-id{
+	clear: left;
+	display: flex;
+	margin: auto;
+	
+}
+
+.develop{
+	clear: both;
+	float: left;
+	display: flex;
+	margin-top: -50px;
+	font-size: 100%;
+}
+
+.xx{
+	display: flex!important;
+	justify-content: center!important;
+	align-content: center!important;
+	flex-direction: column!important;
+  }
+
+
