@@ -13,7 +13,7 @@ function init() {
     intervalRunning = false;                   // used in bubblesort
     sliderSize = document.getElementById("sizeId");
     sliderSpeed = document.getElementById("speedId");
-    maxTime = 1000;                            // min speed value
+    maxTime = 1000;                            // max speed value
     changed = false;
     rst_state = true;                          // false if any function is running, reset won't refresh whn false
     runningAlgo = 0;
@@ -70,11 +70,10 @@ function draw() {
     context.clearRect(0, 0, curr_width, 550);
     var wid = curr_width / arr.length - 1;
     var srt = 0;
-    for (var i = 0; i < arr.length; i++) {
+    for (let i = 0; i < arr.length; i++) {
         context.fillStyle = arr_col[i];
         context.fillRect(srt, 0, wid, arr[i]);
-        srt += wid;
-        srt++;
+        srt += wid + 1;
     }
 }
 
@@ -201,7 +200,6 @@ document.getElementById("heapSort").onclick = function () {
 }
 
 document.getElementById("bubbleSort").onclick = function () {
-    // if (rst_state == true) {
     if (intervalRunning)
         return;
     if (!changed) {
@@ -209,7 +207,6 @@ document.getElementById("bubbleSort").onclick = function () {
         j = 0;
     }
     arr_col[0] = col[0];
-    // }
     runningAlgo = 4;
     rst_state = false;
     disable_all();
@@ -300,9 +297,9 @@ async function QuickSort(start, end) {
     }
     else {
         if (start < arr.length)
-            arr_col[start] = col[3];
+            arr_col[start] = col[4];
         else if (end < arr.length)
-            arr_col[end] = col[3];
+            arr_col[end] = col[4];
         await sleep(100);
         draw();
     }
@@ -313,16 +310,18 @@ async function QuickSort(start, end) {
 async function Partition(start, end) {
     var pivot = arr[end];
     var inti_col = arr_col[end];
-    arr_col[end] = col[2];
+    arr_col[end] = col[3];
 
     var pindex = start;
     for (var i = start; i < end; i++) {
         if (arr[i] <= pivot) {
             await swap(arr, i, pindex);
+            arr_col[pindex] = col[1]
             pindex++;
         }
+        arr_col[i] = col[2]
     }
-    arr_col[pindex] = col[3];
+    arr_col[pindex] = col[4];
     if (pindex != end)
         arr_col[end] = inti_col;
 
@@ -356,11 +355,11 @@ async function heapSort() {
         await heapify(arr.length, i);
     for (var i = arr.length - 1; i > 0; i--) {
         await swap(arr, 0, i);
-        arr_col[i] = col[3];
+        arr_col[i] = col[4];
         await heapify(i, 0);
     }
-    for (i = 0; i < arr.length; i++)
-        arr_col[i] = col[4];
+    // for (i = 0; i < arr.length; i++)
+    //     arr_col[i] = col[4];
     await waitcall();
 }
 //-----------------------------------------------------------------------
